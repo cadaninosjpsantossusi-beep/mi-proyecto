@@ -1,0 +1,184 @@
+<!-- c:\Users\susis\Documents\trae_projects\cafe\menu.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú — Aroma Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .loader{position:fixed;inset:0;background:rgba(15,14,12,.9);display:grid;place-items:center;z-index:100;opacity:1;transition:opacity .4s ease,visibility .4s ease}
+    .loader.hide{opacity:0;visibility:hidden}
+    .loader-inner{display:grid;gap:14px;text-align:center}
+    .label{color:#b7b0a6;font-weight:600}
+    .cup{position:relative;width:86px;height:64px}
+    .cup-body{position:absolute;left:0;bottom:12px;width:72px;height:44px;border-radius:10px;background:linear-gradient(180deg,#201d18,#141310);border:2px solid #3a342d}
+    .cup-handle{position:absolute;right:-10px;bottom:20px;width:20px;height:26px;border:4px solid #3a342d;border-left:none;border-radius:0 12px 12px 0}
+    .saucer{position:absolute;left:-6px;bottom:0;width:88px;height:10px;border-radius:50px;background:#1a1815;border:1px solid #2a2722}
+    .steam{position:absolute;left:10px;top:-8px;width:60px;height:40px;display:flex;gap:10px}
+    .steam span{width:6px;height:6px;background:linear-gradient(180deg, rgba(192,137,85,.8), rgba(192,137,85,0));border-radius:50%;filter:blur(.3px);animation:rise 1.8s infinite ease-in}
+    .steam span:nth-child(2){animation-delay:.3s}
+    .steam span:nth-child(3){animation-delay:.6s}
+    @keyframes rise{0%{transform:translateY(8px);opacity:0}30%{opacity:.8}100%{transform:translateY(-24px);opacity:0}}
+  </style>
+</head>
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="cup">
+        <div class="cup-body"></div>
+        <div class="cup-handle"></div>
+        <div class="saucer"></div>
+      </div>
+      <div class="steam">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="label">Preparando tu café…</div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Aroma Café</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#inicio" class="nav-link">Inicio</a>
+        <a href="#menu" class="nav-link">Menú</a>
+        <a href="index/index.html#contacto" class="nav-link">Contacto</a>
+        <a href="#ordenar" class="btn btn-primary nav-cta">Ordenar</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="menu" class="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Menú completo</h2>
+        <div class="section-link" style="pointer-events:none">Actualizado</div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-media espresso"></div>
+          <div class="card-body">
+            <h3>Americano</h3>
+            <p>Espresso con agua caliente. Limpio y balanceado.</p>
+            <div class="card-footer">
+              <span class="price">$40</span>
+              <button class="btn btn-small add-btn" data-item="Americano">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media latte"></div>
+          <div class="card-body">
+            <h3>Latte</h3>
+            <p>Espresso y leche vaporizada, textura sedosa.</p>
+            <div class="card-footer">
+              <span class="price">$65</span>
+              <button class="btn btn-small add-btn" data-item="Latte">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media espresso"></div>
+          <div class="card-body">
+            <h3>Cappuccino</h3>
+            <p>Espresso, leche y microespuma en equilibrio.</p>
+            <div class="card-footer">
+              <span class="price">$60</span>
+              <button class="btn btn-small add-btn" data-item="Cappuccino">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media coldbrew"></div>
+          <div class="card-body">
+            <h3>Cold Brew</h3>
+            <p>Infusión en frío por 16 horas, baja acidez.</p>
+            <div class="card-footer">
+              <span class="price">$70</span>
+              <button class="btn btn-small add-btn" data-item="Cold Brew">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media espresso"></div>
+          <div class="card-body">
+            <h3>Mocha</h3>
+            <p>Espresso, chocolate y leche. Dulce y goloso.</p>
+            <div class="card-footer">
+              <span class="price">$72</span>
+              <button class="btn btn-small add-btn" data-item="Mocha">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media latte"></div>
+          <div class="card-body">
+            <h3>Flat White</h3>
+            <p>Textura cremosa con protagonismo del espresso.</p>
+            <div class="card-footer">
+              <span class="price">$68</span>
+              <button class="btn btn-small add-btn" data-item="Flat White">Añadir</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Aroma Café</div>
+      <div class="footer-links">
+        <a href="index/index.html#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="index/index.html#historia">Historia</a>
+        <a href="index/index.html#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle')
+    const nav = document.getElementById('nav')
+    const toast = document.getElementById('toast')
+    const year = document.getElementById('year')
+    const loader = document.getElementById('loader')
+    setTimeout(() => {
+      if (loader) {
+        loader.classList.add('hide')
+        setTimeout(() => loader.remove(), 1)
+      }
+    }, 3000)
+
+    year.textContent = new Date().getFullYear()
+    navToggle.addEventListener('click', () => { nav.classList.toggle('open') })
+
+    document.querySelectorAll('.add-btn').forEach(b => {
+      b.addEventListener('click', () => {
+        const item = b.getAttribute('data-item')
+        showToast(item + ' añadido al pedido')
+      })
+    })
+
+    function showToast(message) {
+      toast.textContent = message
+      toast.classList.add('show')
+      setTimeout(() => toast.classList.remove('show'), 2200)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aroma Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand">Aroma Café</a>
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="menu.html" class="nav-link">Menú</a>
+        <a href="#historia" class="nav-link">Historia</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="#ordenar" class="btn btn-primary nav-cta">Ordenar</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title wave">Café de especialidad, hecho con pasión</h1>
+        <p class="hero-subtitle">Granos seleccionados, tostados con cuidado y servidos con calidez.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Ver menú</a>
+          <a href="#historia" class="btn btn-outline">Conócenos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container features-grid">
+        <div class="feature">
+          <h3>Origen</h3>
+          <p>Trabajamos con fincas sostenibles y comercio justo.</p>
+        </div>
+        <div class="feature">
+          <h3>Tostado</h3>
+          <p>Perfiles exclusivos para resaltar notas únicas.</p>
+        </div>
+        <div class="feature">
+          <h3>Experiencia</h3>
+          <p>Baristas certificados y servicio cercano.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Menú</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-media latte"></div>
+            <div class="card-body">
+              <h3>Latte</h3>
+              <p>Suave y cremoso con espresso doble.</p>
+              <div class="card-footer">
+                <span class="price">$65</span>
+                <button class="btn btn-small add-btn" data-item="Latte">Añadir</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media espresso"></div>
+            <div class="card-body">
+              <h3>Espresso</h3>
+              <p>Shot intenso con notas de cacao.</p>
+              <div class="card-footer">
+                <span class="price">$45</span>
+                <button class="btn btn-small add-btn" data-item="Espresso">Añadir</button>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-media coldbrew"></div>
+            <div class="card-body">
+              <h3>Cold Brew</h3>
+              <p>Infusión en frío con cuerpo sedoso.</p>
+              <div class="card-footer">
+                <span class="price">$70</span>
+                <button class="btn btn-small add-btn" data-item="Cold Brew">Añadir</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>Nuestra historia</h2>
+          <p>Nacimos de la curiosidad por el buen café y el deseo de compartirlo. Viajamos, aprendimos y volvimos para crear un espacio donde cada taza cuenta una historia.</p>
+          <p>Creemos en el café como ritual. Ven, siéntate y disfruta.</p>
+          bu
+        </div>
+        <div class="about-media"></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container contact-grid">
+        <div>
+          <h2>Visítanos</h2>
+          <p>Calle Aroma 123, Centro</p>
+          <p>Horario: Lun-Dom 8:00–21:00</p>
+          <a href="#ordenar" class="btn btn-primary">Ordenar ahora</a>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>Escríbenos</h3>
+          <label>
+            <span>Nombre</span>
+            <input type="text" name="nombre" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Aroma Café</div>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="menu.html" class="nav-link">Menú</a>
+        <a href="#historia">Historia</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
